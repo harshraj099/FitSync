@@ -17,7 +17,6 @@
     "cors": "^2.8.5",
     "dotenv": "^16.6.1",
     "express": "^4.22.1",
-    "fitsync": "file:..",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.13.2"
   },
