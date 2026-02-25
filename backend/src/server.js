@@ -23,7 +23,7 @@ const app = express();
 // Middleware
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://fitness-tracking-app-frontend.vercel.app"
+  "https://fit-sync-frontend.vercel.app"
 ];
 
 app.use(
@@ -38,8 +38,6 @@ app.use(
     credentials: true
   })
 );
-
-// app.use(cors());
 
 
 app.use(express.json());
