@@ -20,22 +20,16 @@ const __dirname = path.resolve();
 // Initialize app
 const app = express();
 
-// Middleware
-const allowedOrigins = [
-  "http://localhost:5173",
-  "https://fit-sync-frontend.vercel.app"
-];
+app.set("trust proxy", 1); // ⭐ REQUIRED FOR RENDER
 
+// Middleware
 app.use(
   cors({
-    origin: function (origin, callback) {
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        callback(new Error("Not allowed by CORS"));
-      }
-    },
-    credentials: true
+    origin: [
+      "http://localhost:5173",
+      "https://fit-sync-frontend.vercel.app",
+    ],
+    credentials: true,
   })
 );
 
